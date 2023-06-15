@@ -15,4 +15,9 @@ $Header = @{
     'Authorization' = "Bearer $Token"
 }
 
+Write-Host "#########################"
+Write-Host "Starting script..."
+Write-Host "Token: $Token..."
+Write-Host "#########################"
+
 Invoke-RestMethod -Method "GET" -Certificate $CACertificate -Headers $Header -Uri "$ApiServer/api" -TimeoutSec 30
