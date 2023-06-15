@@ -8,6 +8,7 @@ spec:
     spec:
       template:
         spec:
+          serviceAccountName: powershell
           containers:
           - name: apitest
             image: ghcr.io/roberthstrand/psconf23:main
