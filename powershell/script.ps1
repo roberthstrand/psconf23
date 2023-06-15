@@ -8,7 +8,7 @@ param (
 $ApiServer = "https://kubernetes.default.svc"
 $ServiceAccountPath = "/var/run/secrets/kubernetes.io/serviceaccount"
 #$Namespace = "$ServiceAccountPath/namespace"
-$Token = Get-Content -Path "$ServiceAccountPath/token" | ConvertTo-SecureString
+$Token = Get-Content -Path "$ServiceAccountPath/token" | ConvertTo-SecureString -AsPlainText -Force
 $CACertificate = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("$ServiceAccountPath/ca.crt")
 
 Write-Output "#########################"
