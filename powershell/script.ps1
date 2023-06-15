@@ -5,7 +5,7 @@ param (
     $SecretName
 )
 
-$ApiServer = "https://kubernetes.default.svc"
+$ApiServer = "$ENV:KUBERNETES_SERVICE_HOST:$ENV:KUBERNETES_SERVICE_PORT"
 $ServiceAccountPath = "/var/run/secrets/kubernetes.io/serviceaccount"
 #$Namespace = "$ServiceAccountPath/namespace"
 $Token = Get-Content -Path "$ServiceAccountPath/token" | ConvertTo-SecureString -AsPlainText -Force
