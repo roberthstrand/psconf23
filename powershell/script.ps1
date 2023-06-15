@@ -8,7 +8,7 @@ param (
 $ApiServer = "https://" + $ENV:KUBERNETES_SERVICE_HOST + ":" + $ENV:KUBERNETES_SERVICE_PORT
 $ServiceAccountPath = "/var/run/secrets/kubernetes.io/serviceaccount"
 $Namespace = "$ServiceAccountPath/namespace"
-$Token = Get-Content -Path "$ServiceAccountPath/token" | ConvertTo-SecureString -AsPlainText -Force
+$Token = Get-Content -Path "$ServiceAccountPath/token"
 #$CACertificate = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("$ServiceAccountPath/ca.crt")
 
 Write-Output "#############################"
@@ -24,7 +24,7 @@ $RestParams = @{
     Header = @{
         Authorization = "Bearer $Token"
     }
-    TimeoutSec = 45
+    TimeoutSec = 10
     SkipCertificateCheck = $true
 }
 
