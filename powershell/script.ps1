@@ -9,7 +9,7 @@ $ApiServer = "https://kubernetes.default.svc"
 $ServiceAccountPath = "/var/run/secrets/kubernetes.io/serviceaccount"
 #$Namespace = "$ServiceAccountPath/namespace"
 $Token = "$ServiceAccountPath/token"
-$CACertificate = "$ServiceAccountPath/ca.crt"
+$CACertificate = new X509Certificate2("$ServiceAccountPath/ca.crt")
 
 $Header = @{
     'Authorization' = "Bearer $Token"
