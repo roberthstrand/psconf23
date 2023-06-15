@@ -7,7 +7,7 @@ param (
 
 $ApiServer = "https://" + $ENV:KUBERNETES_SERVICE_HOST + ":" + $ENV:KUBERNETES_SERVICE_PORT
 $ServiceAccountPath = "/var/run/secrets/kubernetes.io/serviceaccount"
-$Namespace = "$ServiceAccountPath/namespace"
+$Namespace = Get-Content "$ServiceAccountPath/namespace"
 $Token = Get-Content -Path "$ServiceAccountPath/token"
 #$CACertificate = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("$ServiceAccountPath/ca.crt")
 
