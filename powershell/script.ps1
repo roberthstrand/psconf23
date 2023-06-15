@@ -23,7 +23,7 @@ $RestParams = @{
     Certificate = $CACertificate
     Authentication = "Bearer"
     Token = $Token
-    TimeoutSec = 30
+    TimeoutSec = 120
 }
 
 Invoke-RestMethod @RestParams
