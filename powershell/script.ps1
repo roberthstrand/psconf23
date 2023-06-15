@@ -15,4 +15,4 @@ $Header = @{
     'Authorization' = "Bearer $Token"
 }
 
-Invoke-RestMethod -Method "GET" -Certificate $CACertificate -Headers $Header -Uri "$ApiServer/api"
+Invoke-RestMethod -Method "GET" -Certificate $CACertificate -Headers $Header -Uri "$ApiServer/api" -TimeoutSec 30
