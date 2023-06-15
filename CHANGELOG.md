@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/roberthstrand/psconf23/compare/v1.3.0...v1.3.1) (2023-06-15)
+
+
+### Bug Fixes
+
+* **ps1:** set type for variable ([b38be6d](https://github.com/roberthstrand/psconf23/commit/b38be6d6dcefb1628cd60a5ef7b3f337ad7f8161))
+
 ## [1.3.0](https://github.com/roberthstrand/psconf23/compare/v1.2.0...v1.3.0) (2023-06-15)
 
 
