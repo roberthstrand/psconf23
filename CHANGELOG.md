@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/roberthstrand/psconf23/compare/v1.2.0...v1.3.0) (2023-06-15)
+
+
+### Features
+
+* **k8s:** initial cronjob test ([a08b860](https://github.com/roberthstrand/psconf23/commit/a08b8605f4ac63b3eec99cce65197e6eb5156edf))
+
+
+### Bug Fixes
+
+* **ps1:** old certificate type ([b0d3d1d](https://github.com/roberthstrand/psconf23/commit/b0d3d1d48364c31af991e3f7d93508c125ac02e8))
+
 ## [1.2.0](https://github.com/roberthstrand/psconf23/compare/v1.1.0...v1.2.0) (2023-06-15)
 
 
