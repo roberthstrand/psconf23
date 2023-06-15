@@ -8,8 +8,8 @@ param (
 $ApiServer = "https://kubernetes.default.svc"
 $ServiceAccountPath = "/var/run/secrets/kubernetes.io/serviceaccount"
 #$Namespace = "$ServiceAccountPath/namespace"
-$Token = "$ServiceAccountPath/token"
-[System.Security.Cryptography.X509Certificates.X509Certificate2]$CACertificate = "$ServiceAccountPath/ca.crt"
+$Token = Get-Content -Path "$ServiceAccountPath/token"
+$CACertificate = Get-Content -Path "$ServiceAccountPath/ca.crt"
 
 $Header = @{
     'Authorization' = "Bearer $Token"
