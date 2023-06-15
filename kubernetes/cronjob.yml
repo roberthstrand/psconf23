@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: psconf-demo
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: apitest
+            image: ghcr.io/roberthstrand/psconf23:main
+            imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure
