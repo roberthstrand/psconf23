@@ -21,9 +21,10 @@ $RestParams = @{
     Method = "GET"
     Uri = "$ApiServer/api/v1/namespaces/$Namespace/pods"
     Certificate = $CACertificate
-    Authentication = "Bearer"
-    Token = $Token
-    TimeoutSec = 120
+    Header = @{
+        Authorization = "Bearer $Token"
+    }
+    TimeoutSec = 45
 }
 
 Invoke-RestMethod @RestParams
