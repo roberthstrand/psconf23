@@ -17,7 +17,6 @@ $Header = @{
 
 Write-Output "#########################"
 Write-Output "Starting script..."
-Write-Output "Token: $Token..."
 Write-Output "#########################"
 
 Invoke-RestMethod -Method "GET" -Certificate $CACertificate -Headers $Header -Uri "$ApiServer/api" -TimeoutSec 30
