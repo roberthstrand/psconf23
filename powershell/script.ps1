@@ -26,7 +26,6 @@ $RestParams = @{
     }
     TimeoutSec = 45
     SkipCertificateCheck = $true
-    AllowUnencryptedAuthentication = $true
 }
 
 Invoke-RestMethod @RestParams
