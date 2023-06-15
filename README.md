@@ -1,1 +1,1 @@
-# psconf23
+# PSConf EU 2023
