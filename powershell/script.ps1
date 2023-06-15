@@ -11,9 +11,11 @@ $ServiceAccountPath = "/var/run/secrets/kubernetes.io/serviceaccount"
 $Token = Get-Content -Path "$ServiceAccountPath/token" | ConvertTo-SecureString -AsPlainText -Force
 $CACertificate = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("$ServiceAccountPath/ca.crt")
 
-Write-Output "#########################"
-Write-Output "Starting script..."
-Write-Output "#########################"
+Write-Output "#############################"
+Write-Output "#    Starting script...     #"
+Write-Output "# Connecting to the address #"
+Write-Output "# $ApiServer #"
+Write-Output "#############################"
 
 $RestParams = @{
     Method = "GET"
