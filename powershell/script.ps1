@@ -20,7 +20,7 @@ Write-Output "#############################"
 $RestParams = @{
     Method = "GET"
     Uri = "$ApiServer/api/v1/namespaces/$Namespace/pods"
-    Certificate = $CACertificate
+    CertificateThumbprint = $CACertificate.thumbprint
     Header = @{
         Authorization = "Bearer $Token"
     }
