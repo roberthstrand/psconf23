@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/roberthstrand/psconf23/compare/v1.1.0...v1.2.0) (2023-06-15)
+
+
+### Features
+
+* **k8s:** initial k8s manifest ([153673b](https://github.com/roberthstrand/psconf23/commit/153673bad1b16fb0c742518c5e0d57b8048c0452))
+
 ## [1.1.0](https://github.com/roberthstrand/psconf23/compare/v1.0.0...v1.1.0) (2023-06-15)
 
 
