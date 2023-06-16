@@ -24,7 +24,7 @@ $RestParams = @{
     Header = @{
         Authorization = "Bearer $Token"
     }
-    TimeoutSec = 10
+    TimeoutSec = 55
     SkipCertificateCheck = $true
     Verbose = $true
 }
