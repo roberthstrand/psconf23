@@ -26,6 +26,7 @@ $RestParams = @{
     }
     TimeoutSec = 10
     SkipCertificateCheck = $true
+    Verbose = $true
 }
 
 Invoke-RestMethod @RestParams
