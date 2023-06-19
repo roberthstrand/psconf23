@@ -16,3 +16,7 @@ If ($Fetch) {
     Invoke-RestMethod @parameters | Convertto-Json `
     | Out-File -FilePath "/data/weather-$(Get-Date -Format FileDateTimeUniversal).json"
 }
+
+Get-ChildItem -Path "/data" -Filter "*.json" | Sort-Object -Property LastWriteTime `
+| Select-Object -Last 1 | Get-Content | ConvertFrom-Json |`
+Select-Object -ExpandProperty main
