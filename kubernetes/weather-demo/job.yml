@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: psconf-weather-demo-presenter
+spec:
+  template:
+    spec:
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: pvc-weather
+      restartPolicy: OnFailure
+      containers:
+      - name: weather
+        image: ghcr.io/roberthstrand/psconf23:main
+        imagePullPolicy: Always
+        command:
+        - "pwsh"
+        - "-File"
+        - "weather.ps1"
+        volumeMounts:
+          - name: data
+            mountPath: /data

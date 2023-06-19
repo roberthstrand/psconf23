@@ -24,6 +24,12 @@ spec:
             volumeMounts:
             - name: data
               mountPath: /data
+            env:
+            - name: OPENWEATHERMAP_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: openweather
+                  key: token
           restartPolicy: OnFailure
 ---
 apiVersion: v1
