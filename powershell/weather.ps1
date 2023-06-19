@@ -14,5 +14,5 @@ If ($Fetch) {
     }
 
     Invoke-RestMethod @parameters | Convertto-Json `
-    | Out-File -FilePath "/Users/rs/dev/roberthstrand/psconf23/weather-$(Get-Date -Format FileDateTimeUniversal).json"
+    | Out-File -FilePath "/data/weather-$(Get-Date -Format FileDateTimeUniversal).json"
 }
